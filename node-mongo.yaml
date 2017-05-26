@@ -1,0 +1,18 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: node-mongo-deploy
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+          app: node-mongo
+    spec:
+      containers:
+      - name: node-app
+        image: node-app:v4
+        imagePullPolicy: Never
+      - name: mongo-app
+        image: mongo:3
+        imagePullPolicy: IfNotPresent

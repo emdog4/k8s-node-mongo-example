@@ -1,0 +1,1 @@
+{"name": "node-mongo-app", "dependencies": {"express":"^4.15.3", "mongodb":"~2.0"}}
